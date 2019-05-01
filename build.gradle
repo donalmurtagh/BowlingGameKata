@@ -1,0 +1,53 @@
+// <editor-fold desc="Build Setup">
+buildscript {
+    ext.kotlin_version = '1.3.31'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.3.31"
+}
+// </editor-fold>
+
+
+// <editor-fold desc="Dependencies">
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.hamcrest:hamcrest-all:1.3'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+}
+
+// </editor-fold>
+
+
+// <editor-fold desc="Kotlin">
+
+apply plugin: 'kotlin'
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+// </editor-fold>
