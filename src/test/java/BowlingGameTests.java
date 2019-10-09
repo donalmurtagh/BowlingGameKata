@@ -9,7 +9,7 @@ import java.util.List;
 public class BowlingGameTests {
 
     @Test
-    public void Should_return_a_zero_score_When_all_gutter_balls() {
+    public void should_return_a_zero_score_when_all_gutter_balls() {
         // When
         List<Integer> game = Arrays.asList(
                 0, 0, // Frame 1
@@ -32,7 +32,7 @@ public class BowlingGameTests {
     }
 
     @Test
-    public void Should_return_correct_score_When_9_pins_down_each_round() {
+    public void should_return_correct_score_when_9_pins_down_each_round() {
         List<Integer> game = Arrays.asList(
                 9, 0, // Frame 1
                 9, 0, // Frame 2
@@ -51,7 +51,7 @@ public class BowlingGameTests {
     }
 
     @Test
-    public void Should_award_bonus_points_for_a_spare_When_scored_other_than_end_of_game() {
+    public void should_award_bonus_points_for_a_spare_when_scored_other_than_end_of_game() {
         List<Integer> game = Arrays.asList(
                 5, 5, // Frame 1
                 5, 0, // Frame 2
@@ -70,7 +70,7 @@ public class BowlingGameTests {
     }
 
     @Test
-    public void Should_award_bonus_points_for_a_spare_When_scored_at_end_of_game() {
+    public void should_award_bonus_points_for_a_spare_when_scored_at_end_of_game() {
         List<Integer> game = Arrays.asList(
                 0, 0, // Frame 1
                 0, 0, // Frame 2
@@ -89,7 +89,7 @@ public class BowlingGameTests {
     }
 
     @Test
-    public void Should_award_bonus_points_for_a_spare_When_scored_in_every_frame() {
+    public void should_award_bonus_points_for_a_spare_when_scored_in_every_frame() {
         List<Integer> game = Arrays.asList(
                 5, 5, // Frame 1
                 5, 5, // Frame 2
@@ -108,7 +108,7 @@ public class BowlingGameTests {
     }
 
     @Test
-    public void Should_award_bonus_points_for_a_strike_When_scored_other_than_end_of_game() {
+    public void should_award_bonus_points_for_a_strike_when_scored_other_than_end_of_game() {
         List<Integer> game = Arrays.asList(
                 10, // Frame 1
                 0, 5, // Frame 2
@@ -127,7 +127,7 @@ public class BowlingGameTests {
     }
 
     @Test
-    public void Should_award_bonus_points_for_a_strike_When_scored_at_end_of_game() {
+    public void should_award_bonus_points_for_a_strike_when_scored_at_end_of_game() {
         List<Integer> game = Arrays.asList(
                 0, 0, // Frame 1
                 0, 0, // Frame 2
@@ -146,7 +146,7 @@ public class BowlingGameTests {
     }
 
     @Test
-    public void Should_award_bonus_points_When_a_perfect_game() {
+    public void should_award_bonus_points_when_a_perfect_game() {
         List<Integer> game = Arrays.asList(
                 10, // Frame 1
                 10, // Frame 2
@@ -166,7 +166,7 @@ public class BowlingGameTests {
 
 
     @Test
-    public void Should_award_bonus_points_When_scored_both_spares_and_strikes() {
+    public void should_award_bonus_points_when_scored_both_spares_and_strikes() {
         List<Integer> game = Arrays.asList(
                 10, // Frame 1
                 5, 5, // Frame 2
