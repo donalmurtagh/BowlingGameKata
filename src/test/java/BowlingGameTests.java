@@ -1,10 +1,9 @@
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class BowlingGameTests {
 
@@ -24,11 +23,7 @@ public class BowlingGameTests {
                 0, 0 // Frame 10
         );
 
-        // Given
-        Integer result = processGame(game);
-
-        // Then
-        assertThat(result, equalTo(0));
+        processGame(game, 0);
     }
 
     @Test
@@ -46,8 +41,7 @@ public class BowlingGameTests {
                 9, 0 // Frame 10
         );
 
-        Integer result = processGame(game);
-        assertThat(result, equalTo(90));
+        processGame(game, 90);
     }
 
     @Test
@@ -65,8 +59,7 @@ public class BowlingGameTests {
                 0, 0 // Frame 10
         );
 
-        Integer result = processGame(game);
-        assertThat(result, equalTo(20));
+        processGame(game, 20);
     }
 
     @Test
@@ -84,8 +77,7 @@ public class BowlingGameTests {
                 5, 5, 5 // Frame 10
         );
 
-        Integer result = processGame(game);
-        assertThat(result, equalTo(15));
+        processGame(game, 15);
     }
 
     @Test
@@ -103,8 +95,7 @@ public class BowlingGameTests {
                 5, 5, 5 // Frame 10
         );
 
-        Integer result = processGame(game);
-        assertThat(result, equalTo(150));
+        processGame(game, 150);
     }
 
     @Test
@@ -122,8 +113,7 @@ public class BowlingGameTests {
                 0, 0 // Frame 10
         );
 
-        Integer result = processGame(game);
-        assertThat(result, equalTo(25));
+        processGame(game, 25);
     }
 
     @Test
@@ -141,8 +131,7 @@ public class BowlingGameTests {
                 10, 10, 10 // Frame 10
         );
 
-        Integer result = processGame(game);
-        assertThat(result, equalTo(30));
+        processGame(game, 30);
     }
 
     @Test
@@ -160,8 +149,7 @@ public class BowlingGameTests {
                 10, 10, 10 // Frame 10
         );
 
-        Integer result = processGame(game);
-        assertThat(result, equalTo(300));
+        processGame(game, 300);
     }
 
 
@@ -180,11 +168,11 @@ public class BowlingGameTests {
                 10, 10, 10// Frame 10
         );
 
-        Integer result = processGame(game);
-        assertThat(result, equalTo(280));
+        processGame(game, 280);
     }
 
-    private Integer processGame(List<Integer> game) {
-        return new BowlingGame().processGame(game);
+    private void processGame(List<Integer> game, int expectedResult) {
+        int actualResult = new BowlingGame().processGame(game);
+        assertEquals(expectedResult, actualResult);
     }
 }
