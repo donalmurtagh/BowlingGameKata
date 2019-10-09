@@ -102,7 +102,7 @@ public class BowlingGameTests {
     public void should_award_bonus_points_for_a_strike_when_scored_other_than_end_of_game() {
         List<Integer> game = Arrays.asList(
                 10, // Frame 1
-                0, 5, // Frame 2
+                1, 5, // Frame 2
                 5, 0, // Frame 3
                 0, 0, // Frame 4
                 0, 0, // Frame 5
@@ -113,7 +113,7 @@ public class BowlingGameTests {
                 0, 0 // Frame 10
         );
 
-        processGame(game, 25);
+        processGame(game, 27);
     }
 
     @Test
