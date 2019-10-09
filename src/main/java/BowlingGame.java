@@ -1,9 +1,8 @@
 import java.util.List;
 
-public class BowlingGameJava {
+public class BowlingGame {
 
     public Integer processGame(List<Integer> game) {
         return -1;
     }
-
 }
